@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Nicolas Martins — Portfólio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+  <style>
+    :root{
+      --accent:#0b63d1;
+      --muted:#6b7280;
+      --card:#ffffff;
+      --bg:#f7fafc;
+      --container:1100px;
+      font-family: Inter, Arial, Helvetica, sans-serif;
+    }
+    html,body{background:var(--bg);color:#0f172a;margin:0;padding:0}
+    .wrap{max-width:var(--container);margin:36px auto;padding:28px}
+    header{display:flex;gap:20px;align-items:center}
+    .avatar{width:88px;height:88px;border-radius:12px;background:#ddd;display:inline-block;flex:0 0 88px}
+    h1{margin:0;font-size:26px}
+    p.lead{margin:6px 0 0;color:var(--muted)}
+    .hero-actions{margin-top:12px}
+    .btn{display:inline-block;padding:8px 14px;border-radius:8px;background:var(--accent);color:#fff;text-decoration:none;font-weight:600}
+    main{margin-top:26px}
+    .section{background:var(--card);padding:18px;border-radius:12px;margin-bottom:18px;box-shadow:0 6px 18px rgba(11,99,209,0.05)}
+    .projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
+    .card{padding:14px;border-radius:10px;border:1px solid rgba(15,23,42,0.04);background:linear-gradient(180deg,#fff,#fbfdff)}
+    .card h3{margin:0 0 6px;font-size:18px}
+    .meta{color:var(--muted);font-size:13px;margin-bottom:10px}
+    footer{margin-top:32px;color:var(--muted);font-size:13px}
+    .tags{margin-top:8px}
+    .tag{display:inline-block;background:#eef6ff;color:var(--accent);padding:4px 8px;border-radius:999px;font-size:12px;margin-right:6px}
+    pre.code{background:#0f172a;color:#fff;padding:10px;border-radius:8px;overflow:auto;font-size:13px}
+    @media(max-width:640px){.wrap{margin:14px;padding:14px}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="avatar">
+        <!-- opcional: coloque assets/avatar.png -->
+        <img src="assets/avatar.png" alt="Nicolas" style="width:100%;height:100%;object-fit:cover;border-radius:12px">
+      </div>
+      <div>
+        <h1>Nicolas Martins — Engenharia de Dados</h1>
+        <p class="lead">Data & Engineering · Python · SQL · ETL · Databricks · Pipelines | Aveiro, Portugal</p>
+        <div class="hero-actions">
+          <a class="btn" href="https://www.linkedin.com/in/nicolas-martins-silva" target="_blank">LinkedIn</a>
+          <a class="btn" href="#projects" style="background:#0f172a;margin-left:8px">Ver projetos</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="section">
+        <h2>Resumo</h2>
+        <p class="meta">Sou Engenheiro de Dados com experiência prática em pipelines de ETL, integração de APIs, processamento em larga escala (Spark/Databricks) e dashboards analíticos. Aqui estão projetos selecionados que demonstram minhas habilidades técnicas e de entrega.</p>
+      </section>
+
+      <section id="projects" class="section">
+        <h2>Projetos em destaque</h2>
+        <div class="projects" style="margin-top:12px">
+          <div class="card">
+            <h3>1. Análise de Turismo em Portugal (Interativo)</h3>
+            <div class="meta">ETL simples • Visualização interativa • Plotly.js</div>
+            <p>Analisei dados de turismo por cidade e criei um dashboard interativo que pode rodar direto no GitHub Pages.</p>
+            <div class="tags"><span class="tag">Python</span><span class="tag">Plotly</span><span class="tag">ETL</span></div>
+            <p style="margin-top:10px"><a class="btn" href="projects/turismo_portugal/index.html">Ver demo</a></p>
+          </div>
+
+          <div class="card">
+            <h3>2. Pipeline ETL (Spark) — Simulação</h3>
+            <div class="meta">PySpark • Integração API • Salvar em parquet</div>
+            <p>Exemplo de pipeline de dados em PySpark (script reproduzível) que consome uma API, limpa e grava dados.</p>
+            <div class="tags"><span class="tag">PySpark</span><span class="tag">ETL</span></div>
+            <p style="margin-top:10px"><a class="btn" href="projects/etl-spark/README.md">Ver código</a></p>
+          </div>
+
+          <div class="card">
+            <h3>3. Web Dashboard (Estático)</h3>
+            <div class="meta">HTML/CSS/JS • Visualização estática • Deploy via Pages</div>
+            <p>Uma página estática com componentes interativos e layout limpo — pronta para customizar.</p>
+            <p style="margin-top:10px"><a class="btn" href="projects/web-dashboard/index.html">Abrir dashboard</a></p>
+          </div>
+
+          <div class="card">
+            <h3>4. SQL Analytics — Consultas e Modelagem</h3>
+            <div class="meta">SQL • modelagem • exemplos de queries</div>
+            <p>Consultas exemplares para análises, juntei exemplos otimizados para BigQuery / Databricks.</p>
+            <p style="margin-top:10px"><a class="btn" href="projects/sql-analytics/consultas.sql">Abrir queries</a></p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Como rodar estes projetos (rápido)</h2>
+        <ol>
+          <li>Clone o repositório: <code>git clone https://github.com/nicolasn892/portfolio.git</code></li>
+          <li>Entre na pasta: <code>cd portfolio</code></li>
+          <li>Abra os projetos em <code>projects/*</code> — abra os .html no navegador ou rode os scripts Python localmente.</li>
+        </ol>
+      </section>
+    </main>
+
+    <footer>
+      <small>© Nicolas Martins — <a href="https://github.com/nicolasn892/portfolio" target="_blank">GitHub</a> · Aveiro, Portugal</small>
+    </footer>
+  </div>
+</body>
+</html>

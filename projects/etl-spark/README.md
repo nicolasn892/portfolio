@@ -1,12 +1,27 @@
-# Pipeline ETL (PySpark) — Exemplo
+# ⛈️ Portugal Weather Data Pipeline
 
-Descrição:
-- Script de exemplo que lê CSVs, faz transformações e grava em formato Parquet particionado.
+## 📌 Project Overview
+An end-to-end **ETL (Extract, Transform, Load) Pipeline** engineered to ingest real-time meteorological data from IPMA (Portuguese Institute for Sea and Atmosphere).
 
-Como rodar local:
-1. Tenha PySpark instalado (ou rode no Databricks).
-2. Ajuste paths de input/output no script.
-3. Rode: `spark-submit etl_spark.py` ou `python etl_spark.py` em ambiente PySpark.
+Unlike static CSV analysis, this project demonstrates a production-ready architecture capable of handling dynamic data sources, robust error handling, and scalable data processing using **Apache Spark**.
 
-Notas:
-- Este script é uma base: documente dependências e parâmetros em produção.
+### 🏗️ Architecture
+1.  **Extract:** Python script consumes the IPMA REST API to fetch daily forecast data (JSON).
+2.  **Raw Layer (Landing Zone):** Saves raw JSON files with timestamp versioning for auditability and replayability.
+3.  **Transform:** **PySpark** processes the semi-structured JSON:
+    * Explodes nested arrays.
+    * Applies schema validation and type casting.
+    * Generates partition columns (`data_previsao`).
+4.  **Load:** Writes optimized **Parquet** files partitioned by date, simulating a Data Lake structure.
+
+## 🛠️ Tech Stack
+* **Language:** Python 3.12
+* **Processing Engine:** Apache Spark (PySpark)
+* **Data Source:** REST API
+* **Storage Format:** Parquet (Columnar Storage)
+* **Environment:** Windows (with custom compatibility patches) / Linux ready
+
+## 🚀 How to Run
+1. Install dependencies:
+   ```bash
+   pip install pyspark requests

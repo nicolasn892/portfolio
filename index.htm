@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Nicolas Martins | Data Engineer</title>
   <meta name="description" content="Portfolio of Nicolas Martins, a Data Engineer specialized in Python, SQL, and ETL processes based in Portugal.">
+  
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://nicolasn892.github.io/portfolio/">
   <meta property="og:title" content="Nicolas Martins | Data Engineer Portfolio">
@@ -15,9 +16,11 @@
   <meta name="twitter:title" content="Nicolas Martins | Data Engineer">
   <meta name="twitter:description" content="Portfolio of Nicolas Martins - Data Engineering, ETL & Analytics.">
   <meta name="twitter:image" content="https://nicolasn892.github.io/portfolio/assets/profile.jpg">
+  
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <link rel="icon" type="image/jpg" href="assets/profile.jpg">
+
   <style>
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -295,7 +298,7 @@
       <h3><i class="fas fa-database" style="color: #2563eb;"></i> Data Engineering</h3>
       <ul class="skill-list">
         <li>ETL Pipelines</li>
-        <li>Data Warehousing Concepts</li>
+        <li>Data Warehousing (Star Schema)</li>
         <li>Apache Spark (Basics)</li>
         <li>API Integration</li>
       </ul>
@@ -326,20 +329,20 @@
 
     <div class="project-card">
       <h3>📊 
-        <span class="lang-en">Portugal Tourism Analysis</span>
-        <span class="lang-pt">Análise de Turismo em Portugal</span>
+        <span class="lang-en">Tourism Data Warehouse (SQL)</span>
+        <span class="lang-pt">Data Warehouse de Turismo (SQL)</span>
       </h3>
       
       <p class="lang-en">
-        End-to-end data analysis project focusing on the tourism sector in Portugal. 
-        Performed data cleaning with <strong>Pandas</strong>, exploratory analysis (EDA), and created visualizations to identify seasonal patterns.
+        Transformation of tourism statistics into a structured <strong>Data Warehouse</strong> using <strong>Star Schema</strong>. 
+        Focuses on data modeling (Fact/Dimension tables) and SQL analytics.
       </p>
       <p class="lang-pt">
-        Projeto de análise de dados focado no setor de turismo em Portugal.
-        Inclui limpeza de dados com <strong>Pandas</strong>, análise exploratória (EDA) e visualizações para identificar padrões sazonais.
+        Transformação de estatísticas de turismo em um <strong>Data Warehouse</strong> estruturado usando <strong>Star Schema</strong>.
+        Foco em modelagem de dados (Tabelas Fato/Dimensão) e análise SQL.
       </p>
 
-      <a class="project-link" href="projects/turismo_portugal/README.md">
+      <a class="project-link" href="projects/turismo_portugal_sql/README.md">
         <span class="lang-en">View Project <i class="fas fa-arrow-right"></i></span>
         <span class="lang-pt">Ver Projeto <i class="fas fa-arrow-right"></i></span>
       </a>
@@ -347,20 +350,20 @@
 
     <div class="project-card">
       <h3>⚙️ 
-        <span class="lang-en">ETL Pipeline with Python</span>
-        <span class="lang-pt">Pipeline ETL com Python</span>
+        <span class="lang-en">Weather ETL Pipeline (PySpark)</span>
+        <span class="lang-pt">Pipeline ETL de Clima (PySpark)</span>
       </h3>
 
       <p class="lang-en">
-        Automated ETL pipeline built with <strong>Python and SQL</strong>. 
-        Extracts data from external sources, transforms raw JSON/CSV into structured formats, and loads datasets ready for downstream analytics.
+        Automated pipeline ingesting real-time data from <strong>IPMA API</strong>. 
+        Extracts JSON, transforms with <strong>PySpark</strong>, and loads into optimized Parquet partitions.
       </p>
       <p class="lang-pt">
-        Pipeline de ETL automatizado construído com <strong>Python e SQL</strong>.
-        Extrai dados de fontes externas, transforma JSON/CSV bruto em formatos estruturados e carrega datasets prontos para análise.
+        Pipeline automatizado ingerindo dados reais da <strong>API do IPMA</strong>.
+        Extrai JSON, transforma com <strong>PySpark</strong> e carrega em partições otimizadas Parquet.
       </p>
 
-      <a class="project-link" href="projects/etl-python/README.md">
+      <a class="project-link" href="projects/etl-spark/README.md">
         <span class="lang-en">View Project <i class="fas fa-arrow-right"></i></span>
         <span class="lang-pt">Ver Projeto <i class="fas fa-arrow-right"></i></span>
       </a>
@@ -388,18 +391,18 @@
     </div>
 
     <div class="project-card">
-      <h3>🔁 
-        <span class="lang-en">Data Automation Scripts</span>
-        <span class="lang-pt">Scripts de Automação de Dados</span>
+      <h3>🤖 
+        <span class="lang-en">Automated Ingestion Bot</span>
+        <span class="lang-pt">Bot de Ingestão Automatizada</span>
       </h3>
 
       <p class="lang-en">
-        Collection of Python scripts to automate repetitive tasks, 
-        including data cleaning, file format standardization, and report generation, increasing efficiency.
+        OOP Python script to automate file ingestion. 
+        Detects, converts (Excel to CSV), sanitizes, and organizes raw data files for pipeline readiness.
       </p>
       <p class="lang-pt">
-        Coleção de scripts Python para automatizar tarefas repetitivas,
-        incluindo limpeza de dados, padronização de formatos e geração de relatórios, aumentando a eficiência.
+        Script Python (OOP) para automatizar a ingestão de arquivos.
+        Detecta, converte (Excel para CSV), higieniza e organiza dados brutos para o pipeline.
       </p>
 
       <a class="project-link" href="projects/automacao/README.md">
